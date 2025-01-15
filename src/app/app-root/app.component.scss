@@ -1,0 +1,58 @@
+$primary-color: #3498db;
+$secondary-color: #a3c1cf;
+$font-family: 'Arial', sans-serif;
+$header-height: 60px;
+
+.main-app {
+    *{
+    font-family: $font-family;
+}
+
+    header {
+        background-color: $primary-color;
+        height: $header-height;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+        font-family: $font-family;
+        color: white;
+      
+        nav {
+          ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            
+            li {
+              margin: 0 15px;
+              font-size: 1rem;
+              text-decoration: none;
+
+              
+              a {
+                transition: color 0.3s ease;
+                
+                &:hover {
+                  color: $secondary-color;
+                }
+              }
+            }
+          }
+        
+        }
+    }
+    a {
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+      
+    }
+    .active {
+      font-weight: 700;
+    }
+}

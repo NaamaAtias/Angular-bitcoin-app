@@ -1,0 +1,8 @@
+<section *ngIf = "contact$ | async as contact">
+    <p>{{contact.name}}</p>
+    <p>{{contact.email}}</p>
+    <p>{{contact.phone}}</p>
+    <button (click)="onBack()">Back</button>
+     <a [routerLink]="['/contact', 'edit', contact._id]" ><button>Edit</button></a>
+</section>
+<router-outlet></router-outlet>

@@ -1,0 +1,24 @@
+<section class="main-app" [ngSwitch]="currentPage">
+      <header>
+        <h1><a routerLink="/home">BITCOIN</a></h1>
+        <nav>
+          <ul>
+            <!-- with no routes:
+            <li><a (click)="changePage('home-page')">Home</a></li>
+            <li><a (click)="changePage('contact-page')">Contacts</a></li>
+            <li><a (click)="changePage('contact-details-page')">Contact-details</a></li> -->
+            <!-- <li><a (click)="changePage('statistic-page')">Statistics</a></li> -->
+            <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active">Contacts</a></li>
+            <!-- <li><a routerLink="/statistic" routerLinkActive="active">Statistics</a></li> -->
+          </ul>
+        </nav>
+      </header>    
+      <router-outlet></router-outlet>  
+      <!-- using switch when no routes:
+       <home-page *ngSwitchCase="'home-page'"></home-page>
+      <contact-page *ngSwitchCase="'contact-page'" (moveToDetails)="moveToDetails($event)"></contact-page>
+      <statistic-page *ngSwitchCase="'statistic-page'"></statistic-page>
+      <contact-details-page *ngSwitchCase="'contact-details-page'" [contactId]="contactId"></contact-details-page> -->
+      <loader />
+</section>

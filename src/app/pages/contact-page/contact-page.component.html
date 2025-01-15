@@ -1,0 +1,7 @@
+<section>
+    <contact-filter></contact-filter>
+    <a class="add-btn" title="Add a New Contact" [routerLink]="['/contact', 'edit']" >+</a>
+    <contact-list class="grid-container" [contacts]="contacts$ | async" (moveToDetails)="moveToDetails.emit($event)"></contact-list>
+</section>
+<router-outlet></router-outlet>
+
